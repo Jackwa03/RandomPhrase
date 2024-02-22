@@ -58,18 +58,19 @@ const teams = {
 };
 
 const astroSign = ['Capricorn', 'Aquarius', 'Pisces', 'Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn'];
-    
+
 // generates and logs to the console required script
 const generateScript = () => {
-    let randTeamName = Object.keys(teams)[Math.floor(Math.random()*18)]
 
-    let randPlayer = teams[randTeamName].players[Math.floor(Math.random()*3)]
-    
-    let randAstroSign = astroSign[Math.floor(Math.random()*13)];
-    
+    let randTeamName = Object.keys(teams)[Math.floor(Math.random() * 18)]
+
+    let randPlayer = teams[randTeamName].players[Math.floor(Math.random() * 3)]
+
+    let randAstroSign = astroSign[Math.floor(Math.random() * 13)];
+
     console.log(`Your favourite team is ${randTeamName} which also contains your favourite player ${randPlayer}!`)
     console.log(`Your star sign is ${randAstroSign}!`)
 
-}
+};
 
-generateScript()
+generateScript();
