@@ -1,60 +1,75 @@
+
+// Storing a list of afl teams and their players as well as asto signs for referance
 const teams = {
     carlton: {
-        players: [`Patrick Cripps`, 'Sam Walsh', 'Sam Docherty']
+        players: [`Patrick Cripps`, 'Sam Walsh', 'Sam Docherty'],
     },
     collingwood: {
-        players: [`Patrick Cripps`, 'Sam Walsh', 'Sam Docherty']
+        players: [`Scott Pendlebury`, 'Darcy Moore', 'Nick Daicos'],
     },
     melbourne: {
-        players: [`Patrick Cripps`, 'Sam Walsh', 'Sam Docherty']
+        players: [`Max Gawn`, 'Christian Petraca', 'Clayton Oliver'],
     },
     westCoast: {
-        players: [`Patrick Cripps`, 'Sam Walsh', 'Sam Docherty']
+        players: [`Liam Ryan`, 'Jake Waterman', 'Andrew Gaff'],
     },
     fremantle: {
-        players: [`Patrick Cripps`, 'Sam Walsh', 'Sam Docherty']
+        players: [`Sam Stuart`, 'Jaeger Omeara', 'Caleb Serong'],
     },
     GWS: {
-        players: [`Patrick Cripps`, 'Sam Walsh', 'Sam Docherty']
+        players: [`Darcy Jones`, 'Stephen Coniglio', 'Toby Greene'],
     },
     goldCoast: {
-        players: [`Patrick Cripps`, 'Sam Walsh', 'Sam Docherty']
+        players: [`Rory Atkins`, 'Sam Flanders', 'Brandon Ellis'],
     },
     northMelbourne: {
-        players: [`Patrick Cripps`, 'Sam Walsh', 'Sam Docherty']
+        players: [`Hugh Greenwood`, 'Jaidyn Stephenson', 'Harry Sheezel'],
     },
     sydney: {
-        players: [`Patrick Cripps`, 'Sam Walsh', 'Sam Docherty']
+        players: [`Chad Warner`, 'Hayden Mclean', 'Taylor Adams'],
     },
     richmond: {
-        players: [`Patrick Cripps`, 'Sam Walsh', 'Sam Docherty']
+        players: [`Nick Vlastuin`, 'Dylan Grimes', 'Dion Prestia'],
     },
     geelong: {
-        players: [`Patrick Cripps`, 'Sam Walsh', 'Sam Docherty']
+        players: [`Ryan Stanley`, 'Zach Tuohy', 'Brandan Parfitt'],
     },
     stKilda: {
-        players: [`Patrick Cripps`, 'Sam Walsh', 'Sam Docherty']
+        players: [`Jack Higgins`, 'Marcus Windhager', 'Zak Jones'],
     },
-    essondon: {
-        players: [`Patrick Cripps`, 'Sam Walsh', 'Sam Docherty']
+    essendon: {
+        players: [`Andrew Mcgrath`, 'Sam Draper', 'Darcy Parish'],
     },
     brisbane: {
-        players: [`Patrick Cripps`, 'Sam Walsh', 'Sam Docherty']
+        players: [`Kai Lohmann`, 'Deven Robertson', 'Joe Daniher'],
     },
     portAdelaide: {
-        players: [`Patrick Cripps`, 'Sam Walsh', 'Sam Docherty']
+        players: [`Connor Rozee`, 'Sam Powell-Pepper', 'Ryan Burton'],
     },
     adelaide: {
-        players: [`Patrick Cripps`, 'Sam Walsh', 'Sam Docherty']
+        players: [`Chayce Jones`, 'Ben Keays', 'Sam Berry'],
     },
     westernBulldogs: {
-        players: [`Patrick Cripps`, 'Sam Walsh', 'Sam Docherty']
+        players: [`Bailey Smith`, 'Adam Treloar', 'Jamarra Ugle-Hagan'],
     },
     hawthorn: {
-        players: [`Patrick Cripps`, 'Sam Walsh', 'Sam Docherty']
+        players: [`Harry Morrison`, 'Mitch Lewis', 'Jai Newcombe'],
     },
+};
+
+const astroSign = ['Capricorn', 'Aquarius', 'Pisces', 'Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn'];
+    
+// generates and logs to the console required script
+const generateScript = () => {
+    let randTeamName = Object.keys(teams)[Math.floor(Math.random()*18)]
+
+    let randPlayer = teams[randTeamName].players[Math.floor(Math.random()*3)]
+    
+    let randAstroSign = astroSign[Math.floor(Math.random()*13)];
+    
+    console.log(`Your favourite team is ${randTeamName} which also contains your favourite player ${randPlayer}!`)
+    console.log(`Your star sign is ${randAstroSign}!`)
+
 }
 
-const astroSign = []
-
-console.log(team[1])
+generateScript()
